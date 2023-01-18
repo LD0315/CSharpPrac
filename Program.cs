@@ -71,9 +71,16 @@ namespace CSharpPrac
             WriteSomething();
             WriteSomethingSpecific("I am an argument and am called from a method");
             Console.Read();
+
+            //int sumResult = Add(15, 31);
+            //Console.WriteLine(sumResult);
+            Console.WriteLine(Add(Add(1, 2), Add(3, 4)));
+            Console.WriteLine(Add(15, 31));
+            Console.Read();
         }
 
         // acess modifier (static) return type method name (parameter1, parameter2)
+        // void methods don't have return values
         public static void WriteSomething()
         {
             Console.WriteLine("I am called from a method");
@@ -84,6 +91,9 @@ namespace CSharpPrac
             Console.WriteLine(myText);
         }
 
-
+        public static int Add(int num1, int num2)
+        {
+            return num1 + num2;
+        }
     }
 }
