@@ -2,10 +2,16 @@
 
 namespace CSharpPrac
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// This is the entry point of our application
+        /// </summary>
+        /// <param name="args"></param>
+        static float vat2 = 17f;
+        public static void Main(string[] args) // <- Method
         {
+            Console.WriteLine("Total vat is: " + vat2);
             Console.WriteLine("Hello World!");
 
             string color = "blue";
@@ -35,14 +41,35 @@ namespace CSharpPrac
 
             // vat is required, don't skip it
             /*
-             * 
-             * 
+             * 1. Hello
+             * 2. World
+             * 3. Linlin
              */
             float totalTax = (summed / 100) * vat;
 
             summed += totalTax;
             Console.WriteLine("Total price is: " + summed);
 
+            MyFirstApp cal = new MyFirstApp();
+            float vat3 = 15;
+            Console.WriteLine("Total vat3 is: " + cal.vat3);
+
+            // Implicitly
+            var username = "Linli";
+
+            //Task: create a program to swap two numbers
+            int a1 = 5;
+            int b1 = 20;
+
+            //logic
+            int temp = a1; // 5
+            a1 = b1; // a = 20
+            b1 = temp; // b = 5
+
+            // Result
+            Console.WriteLine("a is: " + a1 + " and b is: " + b1);
+            
         }
+
     }
 }
