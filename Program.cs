@@ -80,6 +80,10 @@ namespace CSharpPrac
             Console.WriteLine(Devide(25,13));
             Console.Read();
 
+            string input = Console.ReadLine(); // take user input
+            Console.WriteLine(input); // write user input
+            //Console.Read(); // read the user input to console
+
         }
 
         // acess modifier (static) return type method name (parameter1, parameter2)
