@@ -11,6 +11,37 @@ namespace CSharpPrac
         static float vat2 = 17f;
         public static void Main(string[] args) // <- Method
         {
+            //Console.WriteLine(Calculate());
+            //Calculate2();
+            //Console.Read();
+            Console.WriteLine("Please enter a number!");
+            string userInput = Console.ReadLine();
+
+            try
+            {
+                int userInputAsInt = int.Parse(userInput);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Format exception, please enter the correct type next time.");
+                //throw;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Overflow exception, the number was too long or too short for an int32");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("ArgumentNullException, the value was empty(null)");
+            }
+            finally
+            {
+                Console.WriteLine("This is called anyways!");
+            }
+
+            Console.ReadKey();
+
+            
             Console.WriteLine("Total vat is: " + vat2);
             Console.WriteLine("Hello World!");
 
@@ -45,6 +76,7 @@ namespace CSharpPrac
              * 2. World
              * 3. Linlin
              */
+            
             float totalTax = (summed / 100) * vat;
 
             summed += totalTax;
@@ -78,12 +110,38 @@ namespace CSharpPrac
             Console.WriteLine(Add(15, 31));
             Console.WriteLine(Multiply(25, 25));
             Console.WriteLine(Devide(25,13));
-            Console.Read();
 
             string input = Console.ReadLine(); // take user input
             Console.WriteLine(input); // write user input
             //Console.Read(); // read the user input to console
+        }
+        public static int Calculate()
+        {
 
+            Console.WriteLine("Please enter the first number");
+            string number1Input = Console.ReadLine();
+            Console.WriteLine("Please enter the second number");
+            string number2Input = Console.ReadLine();
+
+            int num1 = int.Parse(number1Input);
+            int num2 = int.Parse(number2Input);
+
+            int result = num1 + num2;
+            return result;
+        }
+
+        public static void Calculate2()
+        {
+            Console.WriteLine("Please enter the first number");
+            string number1Input = Console.ReadLine();
+            Console.WriteLine("Please enter the second number");
+            string number2Input = Console.ReadLine();
+
+            int num1 = int.Parse(number1Input);
+            int num2 = int.Parse(number2Input);
+
+            int result = num1 + num2;
+            Console.WriteLine(result);
         }
 
         // acess modifier (static) return type method name (parameter1, parameter2)
@@ -112,5 +170,6 @@ namespace CSharpPrac
         {
             return num1 / num2;
         }
+
     }
 }
