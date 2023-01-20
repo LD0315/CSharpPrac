@@ -11,11 +11,54 @@ namespace CSharpPrac
         static float vat2 = 17f;
         public static void Main(string[] args) // <- Method
         {
+            int num11 = 5;
+            int num22 = 3;
+            int num3;
+
+            // unary operators
+            num3 = -num11;
+            Console.WriteLine("num3 is {0}", num3);
+       
+            bool isSunny = true;
+            Console.WriteLine("is it sunny? {0}", !isSunny);
+
+            // increment operators
+            int num = 0;
+            num++;
+            Console.WriteLine("num is {0}", num);
+            // post increment
+            Console.WriteLine("num is {0}", num++);
+            // pre increment
+            Console.WriteLine("num is {0}", ++num);
+
+            // decrement operator
+            num--;
+            Console.WriteLine("num is {0}", num);
+            // post decrement
+            Console.WriteLine("num is {0}", num--);
+            // pre decrement
+            Console.WriteLine("num is {0}", --num);
+
+
+            Console.ReadKey();
+
+            Console.WriteLine("Please enter a number!");
+            string userInput = Console.ReadLine();
             //Console.WriteLine(Calculate());
             //Calculate2();
             //Console.Read();
-            Console.WriteLine("Please enter a number!");
-            string userInput = Console.ReadLine();
+            int num1 = 5;
+            int num2 = 0;
+            int result;
+
+            try
+            {
+                result = num1 / num2;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Can't devide by zero!");
+            }
 
             try
             {
